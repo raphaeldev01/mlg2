@@ -5,6 +5,11 @@ import styles from "../../styles/Home.module.css"
 
 import ceoImg from "../../assets/ceo_profile2.png"
 import image1 from "../../assets/hero_image.jpeg"
+import BannerSust from "../../assets/banner_sust.jpeg"
+
+import brazilFLag from "../../assets/brazil_flag.png"
+import virginFlag from "../../assets/virgin_flag.png"
+import mlg2Logo from "../../assets/logo_text.png"
 
 const translations = {
   ar: {
@@ -98,21 +103,24 @@ const translations = {
       cta: "عرض جميع السلع",
     },
     products: {
-      title: "Nossos Produtos",
-      subtitle: "Qualidade Premium do Campo ao Mundo",
-      description: "Produtos agrícolas de alta qualidade, cultivados com as melhores práticas sustentáveis.",
+      title: "المحفظة والأسواق المُخدّمة",
+      subtitle: "تحتفظ شركة MLG2 بعلاقات تجارية راسخة مع شركاء في:",
+      description: "تتم العمليات اللوجستية الدولية عبر الموانئ الرئيسية في البرازيل: سانتوس، باراناغوا، إيتاكي، سواپي، وإيتاكواتييرا، مع مراقبة فنية ووثائقية دقيقة.",
       categories: [
-        { name: "Grãos & Cereais", count: "15+ Produtos", icon: "🌾" },
-        { name: "Frutas Tropicais", count: "20+ Variedades", icon: "🥭" },
-        { name: "Proteína Animal", count: "10+ Produtos", icon: "🥩" },
-        { name: "Produtos Orgânicos", count: "25+ Certificados", icon: "🌱" },
+        { name: "أمريكا اللاتينية: البرازيل، الأرجنتين، المكسيك، بنما", count: "", icon: "" },
+        { name: "أوروبا: ألمانيا، هولندا، إسبانيا، إيطاليا", count: "", icon: "" },
+        { name: "أفريقيا: مصر، المغرب، جنوب أفريقيا", count: "", icon: "" },
+        { name: "الشرق الأوسط وآسيا: الإمارات العربية المتحدة، عُمان، الهند، الصين، تركيا", count: "", icon: "" },
       ],
       cta: "Explorar Produtos",
     },
     innovation: {
       title: "Inovação & Tecnologia",
-      subtitle: "Agricultura 4.0 em Ação",
-      description: "Utilizamos as mais avançadas tecnologias para revolucionar a produção agrícola.",
+      subtitle: `رقم التسجيل: 2130405`,
+      description: "المقر القانوني: كراجمير تشامبرز، رود تاون، تورتولا، VG 1110 – جزر العذراء البريطانية",
+      description2: "المكاتب التشغيلية: البرازيل",
+      description3: "المدير التنفيذي: السيد ساندرو إلياس فرانسيسكو فيريرا",
+      description4: "تم تأسيس الشركة لتكون حديثة، رقمية، شفافة وعالمية، قادرة على التكيف مع متطلبات القرن الحادي والعشرين العالمية بمرونة وذكاء سوقي.",
       technologies: [
         { name: "Agricultura de Precisão", description: "GPS e sensores para otimização", icon: "🛰️" },
         { name: "Drones Agrícolas", description: "Monitoramento aéreo inteligente", icon: "🚁" },
@@ -130,6 +138,16 @@ const translations = {
         { title: "الطاقة الشمسية الكهروضوئية", description: "", progress: 100 },
         { title: "شراكات مع مصانع حاصلة على شهادات لإنتاج نظيف", description: "", progress: 100 },
       ],
+      text1: "الامتثال البيئي",
+      text2: "تلتزم الشركة بالكامل بالتشريعات البيئية السارية:",
+      text3: [
+        "القانون رقم 12.305 لسنة 2010 – السياسة الوطنية للنفايات الصلبة",
+        "القانون رقم 9.605 لسنة 1998 – الجرائم البيئية",
+        "رينوفابيو – السياسة الوطنية للوقود الحيوي",
+        "قرار كوناما رقم 237 لسنة 1997 – الترخيص البيئي",
+        "المرسوم رقم 10.387 لسنة 2020 – الحوافز للمشروعات المتجددة",
+      ],
+      text4: "نركز على الإسهام في التحول العالمي للطاقة مع الحفاظ على التوازن بين النمو الاقتصادي والمسؤولية الاجتماعية والبيئية.",
     },
     testimonials: {
       title: "O Que Nossos Parceiros Dizem",
@@ -156,27 +174,49 @@ const translations = {
       ],
     },
     news: {
-      title: "Últimas Notícias",
-      subtitle: "Fique por Dentro do Agronegócio",
+      title: "الحلول المالية والأصول العالمية",
+      subtitle: "تشارك شركة MLG2 أيضًا في هيكلة العمليات المالية الدولية، حيث تقدم دعمًا استراتيجيًا لجمع التمويل، والعمليات العابرة للحدود، والتمويل المؤسسي، والتحركات متعددة العملات، بما في ذلك الأصول الرقمية.",
       items: [
         {
-          title: "MLG2 Expande Operações para África",
-          date: "15 Dez 2024",
-          category: "Expansão",
-          excerpt: "Nova parceria estratégica abre mercados em 5 países africanos...",
+          title: "هيكلة عمليات التصدير بتمويل دولي",
+          src: "https://www.shutterstock.com/image-photo/ai-cargo-ship-technology-global-600nw-2372585739.jpg"
         },
         {
-          title: "Tecnologia de IA Aumenta Produtividade em 40%",
-          date: "10 Dez 2024",
-          category: "Inovação",
-          excerpt: "Sistema proprietário de inteligência artificial revoluciona plantio...",
+          title: "جمع الاستثمارات من خلال الصناديق، والبنوك، وشركات التكنولوجيا المالية (داخل البرازيل وخارجها)",
+          src: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg"
         },
         {
-          title: "Certificação Sustentável Alcança 100% das Fazendas",
-          date: "05 Dez 2024",
-          category: "Sustentabilidade",
-          excerpt: "Marco histórico: todas as propriedades parceiras agora são certificadas...",
+          title: "تنفيذ العمليات عبر بروتوكولات SWIFT MT103 وGPI وSKR وغيرها",
+          src: "https://cdn.iplocation.net/assets/images/blog/2025/featured/swift-image.png"
         },
+        {
+          title: "فتح حسابات تجارية دولية",
+          src: "https://media.istockphoto.com/id/179243711/photo/brazil-argentina-and-world-flags.jpg?s=612x612&w=0&k=20&c=hjuCkoXWXBIvM-GsYji4jZxv6hAu-1m5jBETU6cmNkY="
+        },
+        {
+          title: "المعاملات باستخدام محافظ العملات الرقمية (المحافظ الباردة) لعملات مثل USDT وBTC وETH",
+          src: "https://thumbs.dreamstime.com/b/cryptocurrency-tokens-featuring-bitcoin-ethereum-litecoin-logos-rest-dark-cryptocurrency-tokens-featuring-bitcoin-382012887.jpg"
+        },
+        {
+          title: "التحوّط من تقلبات العملات (Hedge)، والامتثال، وتدقيق KYC/AML",
+          src: "https://media.licdn.com/dms/image/v2/D5612AQFKFxYft2BgDw/article-cover_image-shrink_600_2000/B56ZWEzVd2HQAQ-/0/1741689805260?e=2147483647&v=beta&t=qzrVCA1XCzMVoyb_8Eo2IOm7I3vYEgRuWYrqdqw1XFs"
+        },
+        {
+          title: "بناء علاقات مع مؤسسات في الولايات المتحدة وأوروبا وآسيا والشرق الأوسط",
+          src: "https://images.stockcake.com/public/e/9/6/e96c2d89-e1f3-4aba-9d80-8971eefcf083_large/global-network-map-stockcake.jpg"
+        },
+        // {
+        //   title: "Tecnologia de IA Aumenta Produtividade em 40%",
+        //   date: "10 Dez 2024",
+        //   category: "Inovação",
+        //   excerpt: "Sistema proprietário de inteligência artificial revoluciona plantio...",
+        // },
+        // {
+        //   title: "Certificação Sustentável Alcança 100% das Fazendas",
+        //   date: "05 Dez 2024",
+        //   category: "Sustentabilidade",
+        //   excerpt: "Marco histórico: todas as propriedades parceiras agora são certificadas...",
+        // },
       ],
       cta: "Ver Todas as Notícias",
     },
@@ -288,21 +328,24 @@ const translations = {
       cta: "View All Commodities",
     },
     products: {
-      title: "Our Products",
-      subtitle: "Premium Quality from Field to World",
-      description: "High-quality agricultural products, grown with the best sustainable practices.",
+      title: "Portfolio and Served Markets",
+      subtitle: "MLG2 maintains established negotiations with partners in:",
+      description: "International logistics are carried out through Brazil's main ports: Santos, Paranaguá, Itaqui, Suape, and Itacoatiara, with technical and documentary monitoring.",
       categories: [
-        { name: "Grains & Cereals", count: "15+ Products", icon: "🌾" },
-        { name: "Tropical Fruits", count: "20+ Varieties", icon: "🥭" },
-        { name: "Animal Protein", count: "10+ Products", icon: "🥩" },
-        { name: "Organic Products", count: "25+ Certified", icon: "🌱" },
+        { name: "Latin America: Brazil, Argentina, Mexico, Panama", count: "", icon: "" },
+        { name: "Europe: Germany, Netherlands, Spain, Italy", count: "", icon: "" },
+        { name: "Africa: Egypt, Morocco, South Africa", count: "", icon: "" },
+        { name: "Middle East and Asia: United Arab Emirates, Oman, India, China, Turkey", count: "", icon: "" },
       ],
       cta: "Explore Products",
     },
     innovation: {
       title: "Innovation & Technology",
-      subtitle: "Agriculture 4.0 in Action",
-      description: "We use the most advanced technologies to revolutionize agricultural production.",
+      subtitle: "Registration Number: 2130405",
+      description: "Legal Headquarters: Craigmuir Chambers, Road Town, Tortola, VG 1110 – British Virgin Islands",
+      description2: "Operational Offices: Brazil",
+      description3: "CEO: Mr. Sandro Elias Francisco Ferreira",
+      description4: "The company was designed to be modern, digital, transparent, and international, adapting to the global demands of the 21st century with flexibility and market intelligence.",
       technologies: [
         { name: "Precision Agriculture", description: "GPS and sensors for optimization", icon: "🛰️" },
         { name: "Agricultural Drones", description: "Intelligent aerial monitoring", icon: "🚁" },
@@ -320,6 +363,16 @@ const translations = {
         { title: "Photovoltaic solar energy", description: "", progress: 100 },
         { title: "Partnerships with certified plants for clean production", description: "", progress: 100 },
       ],
+      text1: "Environmental Compliance",
+      text2: "The company's operations fully comply with the current environmental legislation:",
+      text3: [
+        "Law No. 12.305/2010 – National Solid Waste Policy",
+        "Law No. 9.605/1998 – Environmental Crimes",
+        "RenovaBio – National Biofuels Policy",
+        "CONAMA Resolution No. 237/1997 – Environmental Licensing",
+        "Decree No. 10.387/2020 – Incentives for Renewable Projects",
+      ],
+      text4: "Our focus is to contribute to the global energy transition while maintaining a balance between economic growth and socio-environmental responsibility.",
     },
     testimonials: {
       title: "What Our Partners Say",
@@ -346,27 +399,49 @@ const translations = {
       ],
     },
     news: {
-      title: "Latest News",
-      subtitle: "Stay Updated on Agribusiness",
+      title: "Financial Solutions and Global Assets",
+      subtitle: "MLG2 is also engaged in the structuring of international financial operations, offering strategic support for fundraising, cross-border transactions, institutional funding, and multi-currency movements, including digital assets.",
       items: [
         {
-          title: "MLG2 Expands Operations to Africa",
-          date: "Dec 15, 2024",
-          category: "Expansion",
-          excerpt: "New strategic partnership opens markets in 5 African countries...",
+          title: "Structuring of export operations with international financing",
+          src: "https://www.shutterstock.com/image-photo/ai-cargo-ship-technology-global-600nw-2372585739.jpg"
         },
         {
-          title: "AI Technology Increases Productivity by 40%",
-          date: "Dec 10, 2024",
-          category: "Innovation",
-          excerpt: "Proprietary artificial intelligence system revolutionizes planting...",
+          title: "Fundraising through investment funds, banks, and fintechs (in Brazil and abroad)",
+          src: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg"
         },
         {
-          title: "Sustainable Certification Reaches 100% of Farms",
-          date: "Dec 05, 2024",
-          category: "Sustainability",
-          excerpt: "Historic milestone: all partner properties are now certified...",
+          title: "Operations via SWIFT MT103, GPI, SKR, and other protocols",
+          src: "https://cdn.iplocation.net/assets/images/blog/2025/featured/swift-image.png"
         },
+        {
+          title: "Opening of international business accounts",
+          src: "https://media.istockphoto.com/id/179243711/photo/brazil-argentina-and-world-flags.jpg?s=612x612&w=0&k=20&c=hjuCkoXWXBIvM-GsYji4jZxv6hAu-1m5jBETU6cmNkY="
+        },
+        {
+          title: "Transactions using cryptocurrency wallets (cold wallets) for digital currencies such as USDT, BTC, ETH",
+          src: "https://thumbs.dreamstime.com/b/cryptocurrency-tokens-featuring-bitcoin-ethereum-litecoin-logos-rest-dark-cryptocurrency-tokens-featuring-bitcoin-382012887.jpg"
+        },
+        {
+          title: "Currency hedging, compliance, and KYC/AML auditing",
+          src: "https://media.licdn.com/dms/image/v2/D5612AQFKFxYft2BgDw/article-cover_image-shrink_600_2000/B56ZWEzVd2HQAQ-/0/1741689805260?e=2147483647&v=beta&t=qzrVCA1XCzMVoyb_8Eo2IOm7I3vYEgRuWYrqdqw1XFs"
+        },
+        {
+          title: "Relations with institutions in the USA, Europe, Asia, and the Middle East",
+          src: "https://images.stockcake.com/public/e/9/6/e96c2d89-e1f3-4aba-9d80-8971eefcf083_large/global-network-map-stockcake.jpg"
+        },
+        // {
+        //   title: "Tecnologia de IA Aumenta Produtividade em 40%",
+        //   date: "10 Dez 2024",
+        //   category: "Inovação",
+        //   excerpt: "Sistema proprietário de inteligência artificial revoluciona plantio...",
+        // },
+        // {
+        //   title: "Certificação Sustentável Alcança 100% das Fazendas",
+        //   date: "05 Dez 2024",
+        //   category: "Sustentabilidade",
+        //   excerpt: "Marco histórico: todas as propriedades parceiras agora são certificadas...",
+        // },
       ],
       cta: "View All News",
     },
@@ -562,6 +637,7 @@ export default function Home({ language }) {
                 </motion.div>
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>
@@ -648,8 +724,8 @@ export default function Home({ language }) {
         </div>
       </section>
 
-       {/* Sustainability Section */}
-       <section className={styles.sustainabilitySection}>
+      {/* Sustainability Section */}
+      <section className={styles.sustainabilitySection}>
         <div className={styles.sectionContainer}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -690,13 +766,40 @@ export default function Home({ language }) {
             ))}
           </div>
 
-          {/* <p className={styles.sectionDescription}>{t.sustainability.description}</p> */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className={styles.aboutValues}
+          >
+            <h2 className={styles.sectionTitle}>{t.sustainability.text1}</h2>
+              <p style={{margin: "1rem"}} className={styles.sectionDescription}>{t.sustainability.text2}</p>
+            <div className={styles.certificationsGrid2}>
+              {t.sustainability.text3.map(txt =>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4 }}
+                  viewport={{ once: true }}
+                  style={{width: "100%"}}
+                  className={styles.certificationBadge}>
+                  {txt}
+                </motion.div>
+              )}
+            </div>
+              <p style={{margin: "1rem", textAlign:"center"}} className={styles.sectionDescription}>{t.sustainability.text4}</p>
+          </motion.div>
+
 
         </div>
       </section>
 
-             {/* Innovation Section */}
-      <section className={styles.innovationSection}>
+      {/* BANNER */}
+      <img src={BannerSust} className={styles.banner} alt="" />
+
+      {/* News Section */}
+      <section className={styles.newsSection}>
         <div className={styles.sectionContainer}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -705,27 +808,88 @@ export default function Home({ language }) {
             viewport={{ once: true }}
             className={styles.sectionHeader}
           >
-            <h2 className={styles.sectionTitle}>{t.innovation.title}</h2>
-            <p className={styles.sectionSubtitle}>{t.innovation.subtitle}</p>
-            <p className={styles.sectionDescription}>{t.innovation.description}</p>
+            <h2 className={styles.sectionTitle}>{t.news.title}</h2>
+            <p className={styles.sectionSubtitle}>{t.news.subtitle}</p>
           </motion.div>
 
-          <div className={styles.technologiesGrid}>
-            {t.innovation.technologies.map((tech, index) => (
+          <div className={styles.newsGrid}>
+            {t.news.items.map((article, index) => (
               <motion.div
-                key={tech.name}
+                key={article.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={styles.techCard}
+                className={styles.newsCard}
               >
-                <div className={styles.techIcon}>{tech.icon}</div>
-                <h3 className={styles.techName}>{tech.name}</h3>
-                <p className={styles.techDescription}>{tech.description}</p>
+                <div className={styles.newsImage}>
+                  <img
+                    src={article.src}
+                    alt={article.title}
+                    width={400}
+                    height={200}
+                    className={styles.newsImg}
+                  />
+                  <div className={styles.newsCategory}>{article.category}</div>
+                </div>
+                <div className={styles.newsContent}>
+                  <div className={styles.newsDate}>{article.date}</div>
+                  <h3 className={styles.newsTitle}>{article.title}</h3>
+                  <p className={styles.newsExcerpt}>{article.excerpt}</p>
+                </div>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+            className={styles.sectionCtaContainer}
+          >
+            {/* <button className={styles.sectionCta}>{t.news.cta}</button> */}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Innovation Section */}
+      <section className={styles.innovationSection}>
+        <div className={styles.sectionContainer}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className={styles.flags}
+          >
+            <div className={styles.flagContainer}>
+              <img src={virginFlag} alt="" className={styles.flag} />
+            </div>
+            <div className={styles.flagContainer}>
+            <img src={mlg2Logo} alt="" className={styles.flag} />
+            </div>
+            <div className={styles.flagContainer}>
+              <img src={brazilFLag} alt="" className={styles.flag} />
+            </div>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className={styles.sectionHeader}
+          >
+            <h2 className={styles.sectionTitle}>MLG2 BUSINESS CORPORATION</h2>
+            <p className={styles.sectionSubtitle}>{t.innovation.subtitle}</p>
+            <p className={styles.sectionDescription}>• {t.innovation.description}</p>
+            <p className={styles.sectionDescription}>• {t.innovation.description2}</p>
+            <p className={styles.sectionDescription}>• {t.innovation.description3}</p>
+            <p className={styles.sectionDescription}>{t.innovation.description4}</p>
+          </motion.div>
+
+         
         </div>
       </section>
 
@@ -741,7 +905,6 @@ export default function Home({ language }) {
           >
             <h2 className={styles.sectionTitle}>{t.products.title}</h2>
             <p className={styles.sectionSubtitle}>{t.products.subtitle}</p>
-            <p className={styles.sectionDescription}>{t.products.description}</p>
           </motion.div>
 
           <div className={styles.productsGrid}>
@@ -761,6 +924,7 @@ export default function Home({ language }) {
             ))}
           </div>
 
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -768,21 +932,15 @@ export default function Home({ language }) {
             viewport={{ once: true }}
             className={styles.sectionCtaContainer}
           >
-            <Link href="/produtos" className={styles.sectionCta}>
-              {t.products.cta}
-            </Link>
+                        <p className={styles.sectionDescription}>{t.products.description}</p>
+
           </motion.div>
         </div>
       </section>
 
-      
-
-     
-
-     
 
       {/* Testimonials Section */}
-      <section className={styles.testimonialsSection}>
+      {/* <section className={styles.testimonialsSection}>
         <div className={styles.sectionContainer}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -832,65 +990,12 @@ export default function Home({ language }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* News Section */}
-      <section className={styles.newsSection}>
-        <div className={styles.sectionContainer}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className={styles.sectionHeader}
-          >
-            <h2 className={styles.sectionTitle}>{t.news.title}</h2>
-            <p className={styles.sectionSubtitle}>{t.news.subtitle}</p>
-          </motion.div>
-
-          <div className={styles.newsGrid}>
-            {t.news.items.map((article, index) => (
-              <motion.div
-                key={article.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={styles.newsCard}
-              >
-                <div className={styles.newsImage}>
-                  <img
-                    src="/placeholder.svg?height=200&width=400"
-                    alt={article.title}
-                    width={400}
-                    height={200}
-                    className={styles.newsImg}
-                  />
-                  <div className={styles.newsCategory}>{article.category}</div>
-                </div>
-                <div className={styles.newsContent}>
-                  <div className={styles.newsDate}>{article.date}</div>
-                  <h3 className={styles.newsTitle}>{article.title}</h3>
-                  <p className={styles.newsExcerpt}>{article.excerpt}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className={styles.sectionCtaContainer}
-          >
-            <button className={styles.sectionCta}>{t.news.cta}</button>
-          </motion.div>
-        </div>
-      </section>
+      
 
       {/* Partners Section */}
-      <section className={styles.partnersSection}>
+      {/* <section className={styles.partnersSection}>
         <div className={styles.sectionContainer}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -924,10 +1029,10 @@ export default function Home({ language }) {
             ))}
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Certifications Section */}
-      <section className={styles.certificationsSection}>
+      {/* <section className={styles.certificationsSection}>
         <div className={styles.sectionContainer}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -956,10 +1061,10 @@ export default function Home({ language }) {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA Section */}
-      <section className={styles.finalCta}>
+      {/* <section className={styles.finalCta}>
         <div className={styles.ctaContainer}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -976,7 +1081,7 @@ export default function Home({ language }) {
             </Link>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
     </div>
   )

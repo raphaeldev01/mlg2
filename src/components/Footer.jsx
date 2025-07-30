@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom"
 import styles from "../styles/Footer.module.css"
 
+import logo from "../assets/logo_text.png"
+
 const translations = {
   ar: {
     description:
@@ -41,10 +43,9 @@ export default function Footer({ language }) {
         <div className={styles.footerGrid}>
           <div className={styles.footerBrand}>
             <div className={styles.logo}>
-              <div className={styles.logoIcon}>🌾</div>
-              <span className={styles.logoText}>MLG2</span>
+              <img src={logo} alt="" className={styles.imgLogo} />
             </div>
-            <p className={styles.description}>{t.description}</p>
+            {/* <p className={styles.description}>{t.description}</p> */}
             <div className={styles.socialLinks}>
               <a href="#" className={styles.socialLink}>
                 📘

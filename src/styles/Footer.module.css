@@ -121,6 +121,10 @@
   color: #9ca3af;
 }
 
+.imgLogo {
+  height: 50px;
+}
+
 @media (max-width: 768px) {
   .footerGrid {
     grid-template-columns: 1fr;
