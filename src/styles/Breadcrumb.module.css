@@ -1,0 +1,37 @@
+.breadcrumb {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(245, 158, 11, 0.1);
+  padding: 1rem 0;
+  margin-top: 80px; /* Account for fixed header */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumbLink {
+  color: #f59e0b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #d97706;
+}
+
+.separator {
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.current {
+  color: #374151;
+  font-weight: 600;
+}
