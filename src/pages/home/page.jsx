@@ -4,17 +4,18 @@ import { Link } from "react-router-dom"
 import styles from "../../styles/Home.module.css"
 
 import ceoImg from "../../assets/ceo_profile2.png"
-import image1 from "../../assets/hero_image.jpeg"
 import BannerSust from "../../assets/banner_sust.jpeg"
 
 import brazilFLag from "../../assets/brazil_flag.png"
 import virginFlag from "../../assets/virgin_flag.png"
 import mlg2Logo from "../../assets/logo_text.png"
+import Carrosel from "../../components/Carrosel"
+import MiniCarrosel from "../../components/MiniCarrosel"
 
 const translations = {
   ar: {
     hero: {
-      title: "أعمال عالمية بذكاء وهدف",
+      title: "ربط الأعمال بالعالم بذكاء",
       subtitle: "",
       description:
         "تعمل شركة MLG2 Business Corporation في التجارة الدولية، وتقدم حلولًا مالية ذكية وتُعزز الاستدامة العالمية في كل عملية.",
@@ -26,12 +27,16 @@ const translations = {
       },
     },
     founder: {
-      title: "Mensagem do Fundador",
-      name: "Sandro Ferreira",
-      position: "Fundador & CEO da MLG2",
-      message:
-        "Há mais de 25 anos, fundei a MLG2 com uma visão clara: revolucionar o agronegócio brasileiro e conectá-lo ao mundo. Nossa jornada começou com um sonho de transformar a agricultura em uma força global de sustentabilidade e inovação. Hoje, orgulho-me de liderar uma empresa que não apenas cultiva alimentos, mas cultiva o futuro. Acreditamos que o agronegócio é a chave para alimentar o mundo de forma responsável, e continuamos comprometidos em ser pioneiros nessa missão.",
-      quote: '"O futuro da agricultura está na união entre tradição, tecnologia e sustentabilidade."',
+      title: "رسالة من المؤسس",
+      name: "سـاندرو فـيريـرا",
+      position: "المؤسس والرئيس التنفيذي لشركة MLG2",
+      message: [
+        "تأسست MLG2 بهدف تحديث قطاع الزراعة على نطاق عالمي، من خلال تعزيز التكامل بين التكنولوجيا والاستدامة والرؤية الاستراتيجية للسوق. ومنذ البداية، عملنا على وضع هذا القطاع في موقع الريادة في الاقتصاد العالمي، مع تحقيق قيمة مضافة في جميع مراحل سلسلة الإنتاج.",
+        "دورنا يتجاوز مجرد الوساطة التجارية. نحن نربط بين المنتجين والمؤسسات والأسواق بعقلانية ومسؤولية ومعايير أخلاقية عالية، ونقدّم حلولاً قوية لتحديات بيئة دولية متزايدة التعقيد والتطلب.",
+        "إنه مصدر فخر لنا أن نشهد تطورنا من نشاط إقليمي إلى شركة ذات حضور عالمي، معترف بها بفضل مصداقيتها وابتكارها والتزامها بالتنمية المستدامة.",
+        "ونحن ماضون بعزم في مسيرتنا نحو التحول، من خلال تعزيز التحالفات الاستراتيجية ودفع عجلة قطاع زراعي أكثر حداثة وكفاءة واستعداداً للمستقبل.",
+      ],
+      quote: '"ليست التقاليد والابتكار والاستدامة مجرد قيم، بل هي الركائز التي تشكّل مستقبل الزراعة العالمية التنافسية والمرنة."',
     },
     about: {
       title: "تاريخنا",
@@ -65,7 +70,7 @@ const translations = {
             "VHP (الاستقطاب العالي جدًا) – سكر خام عالي الاستقطاب",
             "الإيثانول اللامائي والمائي – للاستخدام الصناعي وكوقود حيوي",
           ],
-          icon: "👨‍🌾",
+          type: "sugar",
         },
         {
           title: "الحبوب ومشتقاتها:",
@@ -76,7 +81,7 @@ const translations = {
             "الديزل الحيوي، الكتلة الحيوية والزيوت النباتية",
 
           ],
-          icon: "🌾",
+          type: "soja",
         },
         {
           title: "البروتينات الحيوانية:",
@@ -86,19 +91,9 @@ const translations = {
             "التوريد إلى الأسواق الآسيوية، والأوروبية، والأفريقية",
 
           ],
-          icon: "🥩",
+          type: "animal",
         },
-        {
-          title: "الشهادات والامتثال:",
-          description: [
-            "شهادة HALAL",
-            "SIF – خدمة التفتيش الفيدرالية",
-            "ISO و HACCP",
-            "التتبع الرقمي وسلسلة لوجستية آمنة",
-            "الامتثال الكامل للوائح التصدير البرازيلية والدولية",
-          ],
-          icon: "🏆",
-        },
+       
       ],
       cta: "عرض جميع السلع",
     },
@@ -186,10 +181,6 @@ const translations = {
           src: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg"
         },
         {
-          title: "تنفيذ العمليات عبر بروتوكولات SWIFT MT103 وGPI وSKR وغيرها",
-          src: "https://cdn.iplocation.net/assets/images/blog/2025/featured/swift-image.png"
-        },
-        {
           title: "فتح حسابات تجارية دولية",
           src: "https://media.istockphoto.com/id/179243711/photo/brazil-argentina-and-world-flags.jpg?s=612x612&w=0&k=20&c=hjuCkoXWXBIvM-GsYji4jZxv6hAu-1m5jBETU6cmNkY="
         },
@@ -240,8 +231,8 @@ const translations = {
   },
   en: {
     hero: {
-      title: "Global business with intelligence",
-      subtitle: " and purpose",
+      title: "Connecting business to the world",
+      subtitle: " with intelligence",
       description:
         "MLG2 Business Corporation operates in international trade, offering intelligent financial solutions and promoting global sustainability in every operation",
       cta: "Discover Our Services",
@@ -252,12 +243,17 @@ const translations = {
       },
     },
     founder: {
-      title: "Founder's Message",
+      title: "Message from the Founder",
       name: "Sandro Ferreira",
       position: "Founder & CEO of MLG2",
       message:
-        "Over 25 years ago, I founded MLG2 with a clear vision: to revolutionize Brazilian agribusiness and connect it to the world. Our journey began with a dream of transforming agriculture into a global force of sustainability and innovation. Today, I am proud to lead a company that not only grows food, but cultivates the future. We believe that agribusiness is the key to feeding the world responsibly, and we remain committed to being pioneers in this mission.",
-      quote: '"The future of agriculture lies in the union of tradition, technology and sustainability."',
+       [
+        "MLG2 was founded with the mission of modernizing agribusiness on a global scale, fostering the integration of technology, sustainability, and a strategic market vision. From the outset, we have worked to position the sector as a key player in the global economy, generating value across all stages of the production chain.",
+        "Our role goes far beyond business intermediation. We connect producers, institutions, and markets with intelligence, responsibility, and a high ethical standard, creating solid solutions for the challenges of an increasingly demanding international environment.",
+        "It is a source of great pride to witness our evolution from a regional operation to a global company, recognized for its credibility, innovation, and commitment to sustainable development.",
+        "We remain steadfast in our journey of transformation, driving strategic alliances and promoting a more modern, efficient, and future-ready agribusiness sector.",
+       ],
+      quote: '"Tradition, innovation, and sustainability are not just values they are the pillars shaping the competitive and resilient future of global agribusiness."',
     },
     about: {
       title: "Our History",
@@ -290,7 +286,7 @@ const translations = {
             "VHP (Very High Polarization) – Raw high-polarization sugar",
             "Anhydrous and Hydrated Ethanol – For industrial use and as biofuel",
           ],
-          icon: "👨‍🌾",
+          type: "sugar",
         },
         {
           title: "Grains and By-products:",
@@ -301,7 +297,7 @@ const translations = {
             "Biodiesel, biomass, and vegetable oil",
 
           ],
-          icon: "🌾",
+          type: "soja",
         },
         {
           title: "Animal Proteins:",
@@ -311,18 +307,7 @@ const translations = {
             "Supply to Asian, European, and African markets",
 
           ],
-          icon: "🥩",
-        },
-        {
-          title: "Certifications and Compliance:",
-          description: [
-            "HALAL Certification",
-            "SIF – Federal Inspection Service",
-            "ISO and HACCP",
-            "Digital traceability and secure logistics chain",
-            "Full compliance with Brazilian and international export regulations",
-          ],
-          icon: "🏆",
+          type: "animal",
         },
       ],
       cta: "View All Commodities",
@@ -411,10 +396,6 @@ const translations = {
           src: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg"
         },
         {
-          title: "Operations via SWIFT MT103, GPI, SKR, and other protocols",
-          src: "https://cdn.iplocation.net/assets/images/blog/2025/featured/swift-image.png"
-        },
-        {
           title: "Opening of international business accounts",
           src: "https://media.istockphoto.com/id/179243711/photo/brazil-argentina-and-world-flags.jpg?s=612x612&w=0&k=20&c=hjuCkoXWXBIvM-GsYji4jZxv6hAu-1m5jBETU6cmNkY="
         },
@@ -428,6 +409,222 @@ const translations = {
         },
         {
           title: "Relations with institutions in the USA, Europe, Asia, and the Middle East",
+          src: "https://images.stockcake.com/public/e/9/6/e96c2d89-e1f3-4aba-9d80-8971eefcf083_large/global-network-map-stockcake.jpg"
+        },
+        // {
+        //   title: "Tecnologia de IA Aumenta Produtividade em 40%",
+        //   date: "10 Dez 2024",
+        //   category: "Inovação",
+        //   excerpt: "Sistema proprietário de inteligência artificial revoluciona plantio...",
+        // },
+        // {
+        //   title: "Certificação Sustentável Alcança 100% das Fazendas",
+        //   date: "05 Dez 2024",
+        //   category: "Sustentabilidade",
+        //   excerpt: "Marco histórico: todas as propriedades parceiras agora são certificadas...",
+        // },
+      ],
+      cta: "View All News",
+    },
+    partners: {
+      title: "Our Global Partners",
+      subtitle: "Connected to the World",
+      description: "We work with the main companies and organizations in global agribusiness.",
+    },
+    certifications: {
+      title: "Certifications & Quality",
+      subtitle: "International Standards of Excellence",
+      items: ["ISO 9001", "HACCP", "Organic", "Fair Trade", "Rainforest Alliance", "Global GAP", "BRC", "SQF"],
+    },
+    cta: {
+      title: "Ready to Transform Your Agribusiness?",
+      subtitle: "Join over 10,000 producers who trust MLG2",
+      description: "Contact us and discover how we can help your company reach new heights in the global market.",
+      button: "Contact Us Now",
+    },
+  },
+  pt: {
+    hero: {
+      title: "Conectando negócios ao mundo",
+      subtitle: " com inteligência.",
+      description:
+        "A MLG2 Business Corporation atua no comércio internacional, oferecendo soluções financeiras inteligentes e promovendo a sustentabilidade global em cada operação.",
+      cta: "Descubra nossos serviços",
+      stats: {
+        countries: "Countries Served",
+        farmers: "Partner Farmers",
+        experience: "Years of Experience",
+      },
+    },
+    founder: {
+      title: "Mensagem do Fundador",
+      name: "Sandro Ferreira",
+      position: "Fundador & CEO da MLG2",
+      message:
+       [
+        "A MLG2 nasceu com a missão de modernizar o agronegócio em escala global, promovendo a integração entre tecnologia, sustentabilidade e uma visão estratégica de mercado. Desde o início, trabalhamos para posicionar o setor como protagonista da economia mundial, gerando valor em todas as pontas da cadeia produtiva.",
+        "Nosso papel vai muito além de intermediar negócios. Conectamos produtores, instituições e mercados com inteligência, responsabilidade e alto padrão ético, criando soluções sólidas para os desafios de um cenário internacional cada vez mais exigente.",
+        "É motivo de orgulho ver como evoluímos de uma atuação regional para uma empresa de presença global, reconhecida pela credibilidade, inovação e compromisso com o desenvolvimento sustentável.",
+        "Seguimos determinados em nossa jornada de transformação, impulsionando alianças estratégicas e promovendo um agronegócio mais moderno, eficiente e preparado para o futuro.",
+       ],
+      quote: '""Tradição, inovação e sustentabilidade não são apenas valores — são os pilares que moldam o futuro competitivo e resiliente do agronegócio global."',
+    },
+    about: {
+      title: "Quem Somos",
+      subtitle: "",
+      description:
+        "A MLG2 Business Corporation é uma empresa internacional de capital privado, com sede registrada nas Ilhas Virgens Britânicas e atuação operacional no Brasil. Especializada em comércio global de commodities, soluções financeiras internacionais e projetos sustentáveis em energia limpa, a MLG2 conecta produtores, instituições e mercados com confiança, competência e alto padrão ético.\nSob a liderança do CEO Sr. Sandro Elias Francisco Ferreira, a empresa desenvolve soluções robustas e seguras, que atendem às exigências de clientes, instituições financeiras e órgãos reguladores em múltiplas jurisdições.",
+      mission: "Promover soluções integradas em comércio exterior e finanças globais, com responsabilidade ambiental, segurança jurídica e excelência no atendimento, conectando o Brasil ao mundo.",
+      vision: "Ser reconhecida globalmente como uma das líderes em exportação de commodities brasileiras e soluções de investimentos internacionais, agregando valor sustentável às cadeias produtivas e financeiras.",
+      cta: "Learn Our Story",
+      textVision: "Missão",
+      textMission: "Visão",
+      textValues: "Valores",
+      value1: "Ética, integridade e transparência",
+      value2: "Compromisso com a sustentabilidade e o meio ambiente",
+      value3: "Excelência técnica e legal em todos os processos",
+      value4: "Respeito ao cliente, aos parceiros e à sociedade",
+      value5: "Inovação estratégica e adaptação ao cenário global",
+      value6: "Conformidade e governança corporativa",
+    },
+    services: {
+      title: "Atuação em Commodities e Comércio Exterior",
+      subtitle: "Produtos Comercializados",
+      description: "A MLG2 é especializada na exportação de produtos agrícolas, proteína animal e derivados de cana-de-açúcar, operando em parceria com as principais usinas de açúcar e álcool do Brasil e grandes cooperativas do Centro-Oeste..",
+      items: [
+        {
+          title: "Açúcares e Derivados:",
+          description: [
+            "ICUMSA 45 – Açúcar branco refinado premium",
+            "ICUMSA 150 – Açúcar branco industrial",
+            "VHP (Very High Polarization) – Açúcar bruto de alta polarização",
+            "Etanol anidro e hidratado – Para uso industrial e como biocombustível",
+          ],
+          type: "sugar",
+        },
+        {
+          title: "Grãos e Subprodutos:",
+          description: [
+            "Soja em grãos, farelo e óleo",
+            "Milho (grão, farelo e óleo)",
+            "Trigo, arroz, algodão, café verde",
+            "Biodiesel, biomassa e óleo vegetal",
+
+          ],
+          type: "soja",
+        },
+        {
+          title: "Proteínas Animais:",
+          description: [
+            "Carne bovina, suína e de frango (inteiros, cortes e miúdos)",
+            "Exportação com certificação HALAL para países árabes e islâmicos",
+            "Atendimento ao mercado asiático, europeu e africano",
+
+          ],
+          type: "animal",
+        },
+        
+      ],
+      cta: "Ver todos Commodities",
+    },
+    products: {
+      title: "Portfólio e Mercados Atendidos",
+      subtitle: "A MLG2 mantém negociações consolidadas com parceiros em:",
+      description: "A logística internacional é realizada pelos principais portos brasileiros: Santos, Paranaguá, Itaqui, Suape e Itacoatiara, com monitoramento técnico e documental.",
+      categories: [
+        { name: "América Latina: Brasil, Argentina, México, Panamá", count: "", icon: "" },
+        { name: "Europa: Alemanha, Holanda, Espanha, Itália", count: "", icon: "" },
+        { name: "África: Egito, Marrocos, África do Sul", count: "", icon: "" },
+        { name: "Oriente Médio e Ásia: Emirados Árabes, Omã, Índia, China, Turquia", count: "", icon: "" },
+      ],
+      cta: "Explore Products",
+    },
+    innovation: {
+      title: "Innovation & Technology",
+      subtitle: "Número de Registro: 2130405",
+      description: "Sede Legal: Craigmur Chambers, Road Town, Tortola, VG 1110 – British Virgin Islands",
+      description2: "Escritórios Operacionais: Brasil",
+      description3: "CEO: Sr. Sandro Elias Francisco Ferreira",
+      description4: "A empresa foi concebida para ser moderna, digital, transparente e internacional, adaptando-se às demandas globais do século XXI com flexibilidade e inteligência de mercado.",
+      technologies: [
+        { name: "Precision Agriculture", description: "GPS and sensors for optimization", icon: "🛰️" },
+        { name: "Agricultural Drones", description: "Intelligent aerial monitoring", icon: "🚁" },
+        { name: "IoT & Sensors", description: "Real-time field data", icon: "📡" },
+        { name: "AI & Machine Learning", description: "Advanced predictive analysis", icon: "🤖" },
+      ],
+    },
+    sustainability: {
+      title: "Sustentabilidade e Energia Limpa",
+      subtitle: "A MLG2 está comprometida com o desenvolvimento sustentável, promovendo e participando de projetos de energia renovável nas áreas de:",
+      description: "Sustainable practices that preserve the environment and ensure productivity.",
+      initiatives: [
+        { title: "Biocombustíveis (biodiesel, etanol)", description: "", progress: 100 },
+        { title: "Biomassa e reaproveitamento agrícola", description: "", progress: 100 },
+        { title: "Energia solar fotovoltaica", description: "", progress: 100 },
+        { title: "Parcerias com usinas certificadas para produção limpa", description: "", progress: 100 },
+      ],
+      text1: "Conformidade Ambiental",
+      text2: "A atuação da empresa respeita integralmente as legislações ambientais vigentes:",
+      text3: [
+        "Lei nº 12.305/2010 – Política Nacional de Resíduos Sólidos",
+        "Lei nº 9.605/1998 – Crimes Ambientais",
+        "RenovaBio – Política Nacional de Biocombustíveis",
+        "CONAMA nº 237/1997 – Licenciamento ambiental",
+        "Decreto nº 10.387/2020 – Incentivos para projetos renováveis",
+      ],
+      text4: "Nosso foco é contribuir com a transição energética global, mantendo o equilíbrio entre crescimento econômico e responsabilidade socioambiental.",
+    },
+    testimonials: {
+      title: "What Our Partners Say",
+      subtitle: "Real Success Stories",
+      items: [
+        {
+          name: "João Silva",
+          position: "Rural Producer - MT",
+          text: "MLG2 transformed our farm. We increased productivity by 35% with their technological solutions.",
+          rating: 5,
+        },
+        {
+          name: "Maria Santos",
+          position: "Agricultural Cooperative - RS",
+          text: "Exceptional partnership! MLG2's technical and commercial support is unmatched in the market.",
+          rating: 5,
+        },
+        {
+          name: "Carlos Oliveira",
+          position: "Exporter - SP",
+          text: "Thanks to MLG2, we managed to expand to 15 new countries. Total professionalism.",
+          rating: 5,
+        },
+      ],
+    },
+    news: {
+      title: "Soluções Financeiras e Ativos Globais",
+      subtitle: "MLG2 também atua na estruturação de operações financeiras internacionais, oferecendo suporte estratégico para captação de recursos, operações cross-border, funding institucional e movimentações multimoedas, incluindo ativos digitais.",
+      items: [
+        {
+          title: "Estruturação de exportações com financiamento internacional",
+          src: "https://www.shutterstock.com/image-photo/ai-cargo-ship-technology-global-600nw-2372585739.jpg"
+        },
+        {
+          title: "Captação de investimentos por meio de fundos, bancos e fintechs (no Brasil e no exterior)",
+          src: "https://images.pexels.com/photos/4175028/pexels-photo-4175028.jpeg"
+        },
+        
+        {
+          title: "Abertura de contas empresariais internacionais",
+          src: "https://media.istockphoto.com/id/179243711/photo/brazil-argentina-and-world-flags.jpg?s=612x612&w=0&k=20&c=hjuCkoXWXBIvM-GsYji4jZxv6hAu-1m5jBETU6cmNkY="
+        },
+        {
+          title: "Transações com carteiras de criptomoedas (cold wallets) para moedas digitais como USDT, BTC, ETH",
+          src: "https://thumbs.dreamstime.com/b/cryptocurrency-tokens-featuring-bitcoin-ethereum-litecoin-logos-rest-dark-cryptocurrency-tokens-featuring-bitcoin-382012887.jpg"
+        },
+        {
+          title: "Proteção cambial (hedge), compliance e auditoria KYC/AML",
+          src: "https://media.licdn.com/dms/image/v2/D5612AQFKFxYft2BgDw/article-cover_image-shrink_600_2000/B56ZWEzVd2HQAQ-/0/1741689805260?e=2147483647&v=beta&t=qzrVCA1XCzMVoyb_8Eo2IOm7I3vYEgRuWYrqdqw1XFs"
+        },
+        {
+          title: "Relacionamento com instituições nos EUA, Europa, Ásia e Oriente Médio",
           src: "https://images.stockcake.com/public/e/9/6/e96c2d89-e1f3-4aba-9d80-8971eefcf083_large/global-network-map-stockcake.jpg"
         },
         // {
@@ -569,13 +766,15 @@ export default function Home({ language }) {
               viewport={{ once: true }}
               className={styles.aboutImage}
             >
-              <img
+              <Carrosel  />
+
+              {/* <img
                 src={image1}
                 alt="MLG2 História"
                 width={600}
                 height={500}
                 className={styles.aboutImg}
-              />
+              /> */}
             </motion.div>
 
             <motion.div
@@ -671,7 +870,9 @@ export default function Home({ language }) {
 
                 <blockquote className={styles.founderQuote}>{t.founder.quote}</blockquote>
 
-                <p className={styles.founderMessage}>{t.founder.message}</p>
+                {t.founder.message.map(msg => 
+                   <p className={styles.founderMessage}>{msg}</p>
+                )}
               </div>
             </div>
           </motion.div>
@@ -703,7 +904,7 @@ export default function Home({ language }) {
                 viewport={{ once: true }}
                 className={styles.serviceCard}
               >
-                <div className={styles.serviceIcon}>{service.icon}</div>
+                <MiniCarrosel type={service.type} />
                 <h3 className={styles.serviceTitle}>{service.title}</h3>
                 <p className={styles.serviceDescription}>{service.description.map(i => <p>• {i}</p>)}</p>
               </motion.div>

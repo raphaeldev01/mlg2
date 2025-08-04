@@ -69,3 +69,18 @@ a:focus {
 .border-primary {
   border-color: var(--primary-500);
 }
+
+.keen-slider {
+  width: 100%;
+  overflow: hidden;position: relative
+}
+
+.keen-slider__slide {
+  min-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.keen-slider__slide {
+  flex: 0 0 100%;
+}

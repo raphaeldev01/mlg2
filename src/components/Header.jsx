@@ -29,6 +29,17 @@ const translations = {
       contact: "Contact",
     },
   },
+  pt: {
+    nav: {
+      home: "Inicio",
+      about: "Sobre",
+      services: "Serviços",
+      products: "Produtos",
+      partners: "Parceiros",
+      finance: "Financeiro",
+      contact: "Contato",
+    },
+  },
 }
 
 export default function Header({ language, setLanguage }) {
@@ -81,6 +92,12 @@ export default function Header({ language, setLanguage }) {
               className={`${styles.langButton} ${language === "en" ? styles.langActive : ""}`}
             >
               EN
+            </button>
+            <button
+              onClick={() => setLanguage("pt")}
+              className={`${styles.langButton} ${language === "pt" ? styles.langActive : ""}`}
+            >
+              PT
             </button>
           </div>
 
